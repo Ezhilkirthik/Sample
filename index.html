@@ -1,56 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .sidebar {
-            background-color: #333;
-            color: #fff;
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
-        }
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        /* Add styles for widgets, graphs, and progress bars */
-        /* ... */
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+    /* Reset CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    /* Header styles */
+    header {
+        background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+        color: #fff;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logout-btn {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Main content styles */
+    main {
+        padding: 40px 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        color: #555;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+</style>
 </head>
 <body>
-    <div class="sidebar">
-        <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#ui-elements">UI Elements</a></li>
-            <!-- Add more menu items here -->
-        </ul>
-    </div>
-    <div class="content">
-        <!-- Add your widgets, graphs, and project sections here -->
-        <!-- Example widgets: -->
-        <div class="widget">
-            <h3>PROFIT THIS WEEK</h3>
-            <!-- Add profit data here -->
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <h1>Dashboard</h1>
+            <button class="logout-btn">Logout</button>
         </div>
-        <!-- ... -->
-        <div class="projects">
-            <h3>Projects</h3>
-            <div class="project">
-                <p>React App</p>
-                <div class="progress-bar" style="width: 60%;"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h2>Profile</h2>
+                    <p>Manage your profile information here.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h2>Settings</h2>
+                    <p>Adjust your account settings.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h2>Analytics</h2>
+                    <p>View analytics and insights.</p>
+                </div>
             </div>
-            <!-- Add other projects here -->
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
